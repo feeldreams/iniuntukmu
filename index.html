@@ -1,0 +1,131 @@
+<html><meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://feeldreams.github.io/iniuntukmu/style.css" rel="stylesheet" type="text/css"/>
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+  
+<head>
+<title>Script HTML buat Kamu</title>
+<!-- 
+  Made with love by Rayys!
+  
+     Blog: https://PalingIT.com
+     Instagram: @rayyarrr
+     TikTok: @rayy4r
+     Email: rayyar0703@gmail.com
+     
+  Thanks to all <3
+-->
+</head>
+<body>
+	
+   <!-- Ganti Audio di sini -->
+   <audio src="https://feeldreams.github.io/anotherme.mp3" id="linkmp3" class="sembunyi"></audio>
+   
+   <div id="bodyblur">
+     <!-- Wallpaper --><img src="https://feeldreams.github.io/sky2.jpeg" id="wallpaper"/><div id="beneranblur"></div>
+   </div>
+   
+   <div id='Content'>
+
+     <div id="kadoIn" onClick="memulai();">
+       <!-- Tombol Surat --><img src="https://feeldreams.github.io/kadoin.png"/>
+     </div>
+     <p id="ket">Klik Kadonya!</p>
+
+     <div class="kumpulanstiker">
+         <!-- Stiker untuk Konten -->
+         <img src="https://feeldreams.github.io/nimasi.gif" id="fotostiker" onClick="aksistiker()"/>
+         <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker2"/>
+         <img src="https://feeldreams.github.io/peachhug.gif" id="fotostiker3"/>
+         <img src="https://feeldreams.github.io/heart.png" id="fotostiker4"/>
+     </div>
+     <p id="halo">Hai, Kamu!</p>
+	 <p id="haloakhir" class="sembunyi">I Love You, Sayang ❤️</p>
+     
+     <div><blockquote id='bq'>
+
+       <!-- Konten Pembukaan -->
+       <p id="kalimat">Aku ada pertanyaan untukmu nih, tunggu ya ...</p>
+       <p id="kalimatb">Jawab yang jujur OK! ❤️</p>
+       <p id="kalimatc">Kamu Sayang Engga Sama Aku? 🤭❤️</p>
+       <p id="kalimatd">Yeayy! Aku juga sayang banget sama kamu 😆❤️</p>
+       <p id="kalimate">Oh iya, seberapa sayang emangnya? 😄❤️</p>
+       
+       <div class="kolomrange">
+       	<div class="inirange"><input type="range" min="1" max="100" value="25"/></div>
+        <div class="inivalue"></div>
+       </div>
+       
+       <p id="kalimatf">Makasii udah sayang sama aku </p>
+       <p id="kalimatg">Sekarang kamu kangen ga sama aku? 🥺❤️</p>
+       <p id="kalimath">Hem.. Aku juga kangen banget sama kamu :(</p>
+       <p id="kalimati">Terakhir deh 😄❤️ <span style="color:#FFFC00">[ <b id="ctimer">3</b> ]</span></p>
+       <p id="kalimatj">Coba klik Stiker di atas 😆❤️</p>
+       
+     </blockquote></div>
+
+     <!-- Tombol Multifungsi -->
+     <div id="Tombol">
+       <a id="By" onClick="multifungsi()">&#128140; Kirim</a>
+       <a id="Bn" onClick="ditolak()">Engga</a>
+     </div>
+     
+     <!-- Pesan Ditolak -->
+     <div id="pesanditolak" class="sembunyi">
+       <img id="stikerditolak" src="https://feeldreams.github.io/ywdh.gif"/>
+       <p id="kataditolak">Yaahh:( yaudah deh🙁</p>
+     </div>
+
+   </div>
+
+<!-- Jangan Edit Bagian Ini --><script>
+  inikuis=0;ftganti=0;flag=1;flagg=1;fungsi=0;ftfungsi=0;fungsiAwal=0;fungsitimer=0;vketikhalo=halo.innerHTML;
+  halo.innerHTML = "";var ahalo=0,vketikhalo;defby=By.innerHTML;deffotostiker=fotostiker.src;
+  Content.style = "opacity:1;margin-top:16vh;";
+  
+  var range = document.querySelector("input");
+  var rangeval = document.querySelector(".inivalue");
+  rangeval.textContent = range.value + "%";
+  range.oninput = function(){rangeval.textContent = this.value + "%";}
+  
+  function memulai(){if(fungsiAwal==0){audio.play();fungsiAwal=1;kadoIn.style="transition:all .8s ease;transform:scale(10);opacity:0";wallpaper.style="transform: scale(1.5);";ket.style="display:none";setTimeout(mulainama,700)}}
+  
+  async function mulainama() {
+           kadoIn.style="display:none";ket.style="display:none";
+           Content.style = "opacity:1;margin-top:2vh";
+           bodyblur.style="opacity:.7";
+           wallpaper.style="transform: scale(1);";
+           fotostiker.style="display:inline-flex;";
+           setTimeout(ftmuncul,200);
+           setTimeout(kethalo,500);
+  }
+  
+  function ftmuncul(){
+    if(ftganti==0){fotostiker.src = deffotostiker;fotostiker.style="display:inline-flex;opacity:1;transform:scale(1)";}
+    if(ftganti==1){fotostiker.src = fotostiker2.src;fotostiker.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";}
+    if(ftganti==2){fotostiker.src = fotostiker3.src;fotostiker.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);";}
+    if(ftganti==3){fotostiker.src = fotostiker4.src;fotostiker.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(1);box-shadow:none;background:none;border:0;width:150px;height:150px";setTimeout(jjfoto,400);}
+  }
+  function fthilang(){fotostiker.style="display:inline-flex;opacity:1;transition:all .7s ease;transform:scale(.1)";}
+  function jjfoto(){fotostiker.style.animation="rto .8s infinite alternate";setInterval(createHeart,200);}
+  function kethalo(){if(ahalo<vketikhalo.length){halo.innerHTML += vketikhalo.charAt(ahalo);ahalo++;setTimeout(kethalo,60);}if(ahalo==vketikhalo.length){setTimeout(bqmuncul,200);}}
+  function bqmuncul(){bq.style = "position:relative;opacity:1;visibility:visible;transform: scale(1);margin-top:0";mulaiketik1();fungsi=1;}
+  
+  function tombol(){Tombol.style="opacity:1;transform: scale(1);";Bn.style="";if(inikuis==0){Bn.style="display:none";By.innerHTML=defby;} if(inikuis==1){By.innerHTML = "Sayang";Bn.innerHTML="Engga";} if(inikuis==2){Bn.style="display:none";By.innerHTML="Lanjut";} if(inikuis==3){Bn.style="display:none";By.innerHTML="Lanjut";} if(inikuis==4){By.innerHTML = "Kangen";Bn.innerHTML="Engga";} if(inikuis==50){Bn.style="display:none";By.innerHTML=defby;Tombol.style="opacity:1;transform: scale(1);margin-top:100px"} }
+  function multifungsi(){if(inikuis==1){befanim();setTimeout(gantikalimat4,400);Tombol.style="transition:all .3s ease;opacity:0";inikuis=0;} if(inikuis==2){befanim();setTimeout(gantikalimat6,400);document.querySelector(".kolomrange").style="";Tombol.style="transition:all .3s ease;opacity:0";inikuis=0;} if(inikuis==3){befanim();setTimeout(gantikalimat7,400);Tombol.style="transition:all .3s ease;opacity:0";inikuis=0;} if(inikuis==4){befanim();setTimeout(gantikalimat8,400);Tombol.style="transition:all .3s ease;opacity:0";inikuis=0;} if(inikuis==50){menuju();}}
+  async function menuju(){window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}
+
+  const body = document.querySelector("body");const swalst = Swal.mixin({timer: 2777, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 90,}); audio = new Audio('' + linkmp3.innerHTML);const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageWidth: 100, imageHeight: 100,}); const style = document.createElement('style'); var today = new Date();var dd = String(today.getDate()).padStart(2, '0');var mm = String(today.getMonth() + 1).padStart(2, '0');var yyyy = today.getFullYear();const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];today = dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy;
+  audio = new Audio('' + linkmp3.src);
+  
+  function createHeart() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);
+</script>
+<script src="https://feeldreams.github.io/iniuntukmu/script.js"></script>
+<!-- Sampai Sini -->
+</body>
+</html>
